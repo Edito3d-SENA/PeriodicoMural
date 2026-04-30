@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Periódico mural digital de la Institución Educativa Aureliano Flórez Cardona - Anserma">
+    <title>Periódico Mural Digital | I.E. Aureliano Flórez Cardona</title>
+    
+    <!-- Bootstrap 5 CSS (CDN oficial) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts: Inter (moderna y minimalista) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome 6 (iconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Estilos personalizados (moderno + minimalista + animado) -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- ========================================================
+         HEADER MEJORADO CON 2 LOGOS A LA IZQUIERDA
+         (SIN lemas "Ciencia y Técnica, Teatro y Deporte")
+         ======================================================== -->
+    <header class="header-moderno">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Columna izquierda: 2 logos -->
+                <div class="col-md-4 text-md-start text-center mb-3 mb-md-0">
+                    <div class="logos-container">
+                        <div class="logo-item logo-1">
+                        <img src="imagenes/logo-colegio.png" alt="Logo Institución Educativa" style="width: 64px; height: auto;">
+                        </div>
+                        <div class="logo-item logo-2">
+                        <img src="imagenes/logo-secundario.png" alt="Logo secundario" style="width: 90px; height: auto;">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Columna centro/derecha: títulos -->
+                <div class="col-md-8 text-md-end text-center">
+                    <div class="titulos-header">
+                        <h1>PERIÓDICO MURAL DIGITAL</h1>
+                        <p>Institución Educativa Aureliano Flórez Cardona – Anserma</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========================================================
+         BARRA DE NAVEGACIÓN (con Bootstrap)
+         ======================================================== -->
+    <nav class="nav-bar-moderna">
+        <div class="container">
+            <ul class="nav justify-content-center py-2 flex-wrap">
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="#noticias"><i class="fas fa-newspaper me-1"></i> Noticias</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="#agenda"><i class="fas fa-calendar-alt me-1"></i> Agenda</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="#cultura"><i class="fas fa-palette me-1"></i> Cultura</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="#deportes"><i class="fas fa-futbol me-1"></i> Deportes</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="#reflexion"><i class="fas fa-comment-dots me-1"></i> Reflexión</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="#avisos"><i class="fas fa-bullhorn me-1"></i> Avisos</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="#reconocimientos"><i class="fas fa-star me-1"></i> Reconocimientos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <!-- ==================== NOTICIAS ==================== -->
+        <section id="noticias" class="mb-5">
+            <h2><i class="fas fa-newspaper me-2"></i> Noticias destacadas</h2>
+            <div class="row g-4" id="noticias-container">
+                <!-- JS llena aquí -->
+            </div>
+        </section>
+
+        <!-- ==================== AGENDA ==================== -->
+        <section id="agenda" class="mb-5">
+            <h2><i class="fas fa-calendar-alt me-2"></i> Agenda mensual</h2>
+            <div class="agenda-lista" id="agenda-container"></div>
+        </section>
+
+        <!-- ==================== CULTURA ==================== -->
+        <section id="cultura" class="mb-5">
+            <h2><i class="fas fa-palette me-2"></i> Espacio cultural</h2>
+            <div class="row g-4" id="cultura-container"></div>
+        </section>
+
+        <!-- ==================== DEPORTES ==================== -->
+        <section id="deportes" class="mb-5">
+            <h2><i class="fas fa-futbol me-2"></i> Deportes y recreación</h2>
+            <div class="row g-4" id="deportes-container"></div>
+        </section>
+
+        <!-- ==================== REFLEXIÓN ==================== -->
+        <section id="reflexion" class="mb-5">
+            <h2><i class="fas fa-comment-dots me-2"></i> Reflexión del mes</h2>
+            <div class="reflexion" id="reflexion-container"></div>
+        </section>
+
+        <!-- ==================== AVISOS ==================== -->
+        <section id="avisos" class="mb-5">
+            <h2><i class="fas fa-bullhorn me-2"></i> Avisos importantes</h2>
+            <div class="avisos" id="avisos-container"></div>
+        </section>
+
+        <!-- ==================== RECONOCIMIENTOS ==================== -->
+        <section id="reconocimientos" class="mb-5">
+            <h2><i class="fas fa-star me-2"></i> Reconocimientos</h2>
+            <div class="row g-4" id="reconocimientos-container"></div>
+        </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer-moderno">
+        <div class="container text-center">
+            <p>🏫 Institución Educativa Aureliano Flórez Cardona – Anserma</p>
+            <p>📞 Contacto: 123-4567 | ✉️ colegio@aurelianoflorez.edu.co</p>
+            <p class="mt-3 small">"Formando líderes con excelencia y valores"</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle (opcional para interacciones) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // ==================== DATOS DE CONTENIDO ====================
+        const noticias = [
+          { 
+           titulo: "Feria de Ciencias 2026", 
+           fecha: "15 de mayo", 
+           resumen: "Estudiantes presentaron innovadores proyectos tecnológicos.", 
+           imagen: "imagenes/noticias/rojo.png"  // ← ruta de la imagen
+          },
+          { 
+           titulo: "Olimpiadas matemáticas", 
+           fecha: "10 de mayo", 
+           resumen: "120 estudiantes participaron en la fase interna.", 
+           imagen: "imagenes/noticias/olimpiadas-matematicas.jpg"
+          },
+          { 
+           titulo: "Jornada ambiental", 
+           fecha: "20 de mayo", 
+           resumen: "Reforestación y limpieza de zonas verdes.", 
+           imagen: "imagenes/noticias/jornada-ambiental.jpg"
+          }
+        ];
+
+        const agenda = [
+            { fecha: "Mayo 25", evento: "Reunión de padres de familia (primaria) - 6:00 PM" },
+            { fecha: "Mayo 27", evento: "Torneo relámpago de fútbol" },
+            { fecha: "Mayo 30", evento: "Ensayos abiertos del grupo de teatro" }
+        ];
+
+        const cultura = [
+            { 
+              titulo: "Feria de Ciencias 2026", 
+              fecha: "15 DE MAYO", 
+              resumen: "Estudiantes presentaron innovadores proyectos tecnológicos.", 
+              imagen: "imagenes/cultura/rojo.png"
+            },
+            { 
+              titulo: "Concurso de poesía", 
+              fecha: "INSCRIPCIONES ABIERTAS", 
+              resumen: "Tema: 'Mi colegio, mi hogar'.", 
+              imagen: "imagenes/cultura/concurso-poesia.jpg"
+            }
+         ];
+
+        const deportes = [
+            { titulo: "Campeonato interclases", fecha: "Todo mayo", resumen: "Finales de baloncesto y fútbol.", icono: "🏆" },
+            { titulo: "Clínicas deportivas", fecha: "Sábados 8 AM", resumen: "Entrenamiento de natación y atletismo.", icono: "🏊" }
+        ];
+
+        const reflexion = { frase: "“La educación es el arma más poderosa para cambiar el mundo” - Nelson Mandela", autor: "Valor del mes: Responsabilidad" };
+
+        const avisos = ["📌 26 de mayo no hay clases por día cívico.", "📌 Entrega de boletines: 3 y 4 de junio.", "📌 Convocatoria abierta para danzas."];
+
+        const reconocimientos = [
+    { 
+        nombre: "Valentina Ruiz", 
+        logro: "Ganadora Olimpiada Matemáticas", 
+        grado: "9°B",
+        foto: "imagenes/estudiantes/valentina.png"
+    },
+    { 
+        nombre: "Grupo de Teatro", 
+        logro: "Seleccionados a festival municipal", 
+        grado: "",
+        foto: "imagenes/estudiantes/grupo-teatro.png"
+    },
+    { 
+        nombre: "Samuel Cardona", 
+        logro: "Récord escolar 100m planos", 
+        grado: "11°A",
+        foto: "imagenes/estudiantes/samuel.png"
+    }
+];
+
+        // ==================== FUNCIONES RENDER ====================
+        function renderNoticias() {
+    const container = document.getElementById('noticias-container');
+    if (!container) return;
+    container.innerHTML = noticias.map(n => `
+        <div class="col-md-6 col-lg-4">
+            <div class="tarjeta-moderna">
+                <div class="img-noticia">
+                    <img src="${n.imagen}" alt="${n.titulo}">
+                </div>
+                <div class="p-4">
+                    <div class="fecha">📅 ${n.fecha}</div>
+                    <h3 class="fs-5 fw-semibold">${n.titulo}</h3>
+                    <p class="text-secondary">${n.resumen}</p>
+                    <a href="#" class="btn-leer">Leer más →</a>
+                </div>
+            </div>
+        </div>
+    `).join('');
+}
+
+        function renderAgenda() {
+            const container = document.getElementById('agenda-container');
+            if (!container) return;
+            container.innerHTML = agenda.map(item => `
+                <div class="evento">
+                    <span class="evento-fecha">${item.fecha}</span>
+                    <div class="evento-texto">📌 ${item.evento}</div>
+                </div>
+            `).join('');
+        }
+
+        function renderCultura() {
+           const container = document.getElementById('cultura-container');
+           if (!container) return;
+               container.innerHTML = cultura.map(c => `
+            <div class="col-md-6">
+                <div class="tarjeta-moderna h-100">
+                    <div class="img-cultura">
+                    <img src="${c.imagen}" alt="${c.titulo}" loading="lazy">
+                    </div>
+                    <div class="p-4">
+                    <div class="fecha-cultura">${c.fecha}</div>
+                    <h3 class="fs-5 fw-semibold mt-2">${c.titulo}</h3>
+                    <p class="text-secondary">${c.resumen}</p>
+                    <a href="#" class="btn-leer">Más info →</a>
+                   </div>
+                 </div>
+            </div>
+           `).join('');
+        }
+
+        function renderDeportes() {
+            const container = document.getElementById('deportes-container');
+            if (!container) return;
+            container.innerHTML = deportes.map(d => `
+                <div class="col-md-6">
+                    <div class="tarjeta-moderna">
+                        <div class="img-placeholder">${d.icono}</div>
+                        <div class="p-4">
+                            <div class="fecha">📅 ${d.fecha}</div>
+                            <h3 class="fs-5 fw-semibold">${d.titulo}</h3>
+                            <p class="text-secondary">${d.resumen}</p>
+                            <a href="#" class="btn-leer">Ver más →</a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderReflexion() {
+            const container = document.getElementById('reflexion-container');
+            if (!container) return;
+            container.innerHTML = `<div class="frase">“${reflexion.frase}”</div><div class="autor mt-2">✨ ${reflexion.autor} ✨</div>`;
+        }
+
+        function renderAvisos() {
+            const container = document.getElementById('avisos-container');
+            if (!container) return;
+            container.innerHTML = `<ul class="mb-0">${avisos.map(a => `<li class="mb-2">${a}</li>`).join('')}</ul>`;
+        }
+
+        function renderReconocimientos() {
+          const container = document.getElementById('reconocimientos-container');
+          if (!container) return;
+          container.innerHTML = reconocimientos.map(r => `
+          <div class="col-md-4">
+              <div class="reconocimiento">
+                 <!-- Foto redonda del estudiante -->
+                 <div class="foto-redonda">
+                    <img src="${r.foto}" alt="${r.nombre}">
+                 </div>
+                  <div class="estrella"><i class="fas fa-star"></i></div>
+                  <h3 class="fs-5">${r.nombre}</h3>
+                  <p class="mb-1">🏅 ${r.logro}</p>
+                  ${r.grado ? `<small class="text-secondary">📍 ${r.grado}</small>` : ''}
+               </div>
+          </div>
+           `).join('');
+         }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderNoticias();
+            renderAgenda();
+            renderCultura();
+            renderDeportes();
+            renderReflexion();
+            renderAvisos();
+            renderReconocimientos();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,716 @@
+/* ========================================================
+   ESTILOS MODERNOS, MINIMALISTAS Y ANIMADOS
+   Institución Educativa Aureliano Flórez Cardona - Anserma
+   
+   PALETA DE COLORES:
+   - Verde menta (principal): #2DD4BF
+   - Verde oscuro (acento): #0F766E
+   - Naranja coral (detalles): #F97316
+   - Blanco: #FFFFFF
+   - Gris claro fondo: #F8FAFC
+   - Gris texto: #334155
+   - Negro suave títulos: #0F172A
+   
+   ANIMACIONES INCLUIDAS:
+   - Fade in al cargar
+   - Hover con elevación
+   - Transiciones suaves
+   - Efecto shimmer en imágenes
+   - Animación de entrada para tarjetas
+   ======================================================== */
+
+/* ==================== ANIMACIONES GLOBALES ==================== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ==================== RESET Y GLOBALES ==================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: #F8FAFC;
+    color: #334155;
+    line-height: 1.5;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ==================== TIPOGRAFÍA ==================== */
+
+h1, h2, h3, .titulo-fuente {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #0F172A;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #0F172A 0%, #2DD4BF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #0F172A;
+    margin-bottom: 24px;
+    font-weight: 600;
+    display: inline-block;
+    position: relative;
+}
+
+/* Línea decorativa animada debajo de h2 */
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 48px;
+    height: 3px;
+    background: #F97316;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+h2:hover::after {
+    width: 80px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: #0F172A;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+/* ==================== HEADER MODERNO ==================== */
+
+.header-moderno {
+    background: white;
+    border-bottom: 1px solid #E2E8F0;
+    padding: 20px 0;
+    animation: slideInLeft 0.6s ease-out;
+}
+
+/* Contenedor de logos */
+.logos-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* ==================== LOGOS LIMPIOS (SIN FONDO) ==================== */
+
+.logos-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Elimina TODO fondo, borde y sombra */
+.logo-item {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.logo-item:hover {
+    transform: translateY(-4px) scale(1.02);
+    background: transparent !important;
+}
+
+.logo-item img {
+    width: 60px;
+    height: auto;
+    display: block;
+}
+
+/* Si usas emojis o texto en lugar de imágenes */
+.logo-item span {
+    background: transparent;
+    font-size: 2.5rem;
+}
+
+/* Títulos del header */
+.titulos-header h1 {
+    font-size: 1.6rem;
+    color: #0F172A;
+    margin-bottom: 4px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    background: none;
+    -webkit-text-fill-color: #0F172A;
+}
+
+.titulos-header p {
+    font-size: 0.9rem;
+    color: #64748B;
+    margin-bottom: 0;
+}
+
+/* ==================== NAVEGACIÓN ==================== */
+
+.nav-bar-moderna {
+    background: white;
+    border-bottom: 1px solid #E2E8F0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.nav-link-custom {
+    color: #475569 !important;
+    font-weight: 500;
+    border-radius: 40px;
+    padding: 8px 20px !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+/* Efecto underline animado */
+.nav-link-custom::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #2DD4BF;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link-custom:hover::before {
+    width: 60%;
+}
+
+.nav-link-custom:hover {
+    background-color: #F1F5F9;
+    color: #0F766E !important;
+    transform: translateY(-2px);
+}
+
+/* ==================== TARJETAS (CON ANIMACIONES) ==================== */
+
+.tarjeta-moderna {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid #E2E8F0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+    animation: fadeInUp 0.6s ease-out backwards;
+}
+
+/* Delay escalonado para las tarjetas */
+.tarjeta-moderna:nth-child(1) { animation-delay: 0.1s; }
+.tarjeta-moderna:nth-child(2) { animation-delay: 0.2s; }
+.tarjeta-moderna:nth-child(3) { animation-delay: 0.3s; }
+.tarjeta-moderna:nth-child(4) { animation-delay: 0.4s; }
+
+.tarjeta-moderna:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 35px -12px rgba(0, 0, 0, 0.12);
+    border-color: #2DD4BF;
+}
+
+/* Placeholder de imagen con efecto shimmer */
+.img-placeholder {
+    height: 160px;
+    background: linear-gradient(135deg, #2DD4BF 0%, #0F766E 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-placeholder::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    animation: shimmer 3s infinite;
+}
+
+.contenido-tarjeta {
+    padding: 20px;
+}
+
+.fecha {
+    font-size: 0.75rem;
+    color: #F97316;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.btn-leer {
+    display: inline-block;
+    margin-top: 16px;
+    color: #0F766E;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.btn-leer::after {
+    content: '→';
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.btn-leer:hover {
+    color: #F97316;
+}
+
+.btn-leer:hover::after {
+    transform: translateX(5px);
+}
+
+/* ==================== AGENDA ==================== */
+
+.agenda-lista {
+    background: white;
+    border-radius: 24px;
+    padding: 24px;
+    border: 1px solid #E2E8F0;
+    animation: fadeInUp 0.6s ease-out 0.2s backwards;
+}
+
+.evento {
+    padding: 14px 0;
+    border-bottom: 1px solid #F1F5F9;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.evento:hover {
+    transform: translateX(8px);
+    background: #F8FAFC;
+    padding-left: 12px;
+    border-radius: 12px;
+}
+
+.evento:last-child {
+    border-bottom: none;
+}
+
+.evento-fecha {
+    background: #F1F5F9;
+    color: #0F766E;
+    padding: 4px 14px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    min-width: 100px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.evento:hover .evento-fecha {
+    background: #2DD4BF;
+    color: white;
+}
+
+.evento-texto {
+    flex: 1;
+    color: #334155;
+    font-weight: 500;
+}
+
+/* ==================== RECONOCIMIENTOS ==================== */
+
+.reconocimiento {
+    background: white;
+    border-radius: 24px;
+    padding: 24px;
+    text-align: center;
+    border: 1px solid #E2E8F0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+    animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.reconocimiento:nth-child(1) { animation-delay: 0.1s; }
+.reconocimiento:nth-child(2) { animation-delay: 0.2s; }
+.reconocimiento:nth-child(3) { animation-delay: 0.3s; }
+
+.reconocimiento:hover {
+    border-color: #2DD4BF;
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.1);
+}
+
+.estrella {
+    font-size: 2rem;
+    color: #F97316;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
+
+.reconocimiento:hover .estrella {
+    transform: scale(1.2) rotate(5deg);
+}
+
+/* ==================== REFLEXIÓN ==================== */
+
+.reflexion {
+    background: white;
+    border-left: 4px solid #F97316;
+    padding: 32px;
+    border-radius: 24px;
+    border: 1px solid #E2E8F0;
+    border-left-width: 6px;
+    text-align: center;
+    transition: all 0.4s ease;
+    animation: slideInRight 0.6s ease-out;
+}
+
+.reflexion:hover {
+    transform: scale(1.01);
+    box-shadow: 0 15px 30px -12px rgba(0, 0, 0, 0.1);
+}
+
+.frase {
+    font-size: 1.3rem;
+    color: #0F172A;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.reflexion:hover .frase {
+    color: #2DD4BF;
+}
+
+.autor {
+    margin-top: 16px;
+    color: #64748B;
+    font-size: 0.85rem;
+}
+
+/* ==================== AVISOS ==================== */
+
+.avisos {
+    background: #FEF9F5;
+    border-radius: 24px;
+    padding: 24px;
+    border: 1px solid #FFEDD5;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.6s ease-out 0.1s backwards;
+}
+
+.avisos:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px -5px rgba(249, 115, 22, 0.1);
+}
+
+.avisos ul {
+    margin-left: 20px;
+}
+
+.avisos li {
+    margin: 12px 0;
+    color: #334155;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.avisos li:hover {
+    color: #F97316;
+    transform: translateX(6px);
+}
+
+/* ==================== FOOTER ==================== */
+
+.footer-moderno {
+    background: white;
+    border-top: 1px solid #E2E8F0;
+    padding: 40px 0;
+    margin-top: 60px;
+    color: #64748B;
+    font-size: 0.85rem;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.footer-moderno p {
+    margin: 8px 0;
+    transition: color 0.3s ease;
+}
+
+.footer-moderno p:hover {
+    color: #2DD4BF;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    .logos-container {
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+    
+    .titulos-header {
+        text-align: center;
+    }
+    
+    .frase {
+        font-size: 1rem;
+    }
+    
+    .nav-link-custom {
+        padding: 6px 14px !important;
+        font-size: 0.8rem;
+    }
+    
+    .evento:hover {
+        transform: translateX(4px);
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-noticias {
+        grid-template-columns: 1fr;
+    }
+    
+    .reconocimientos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .logo-item {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .logo-item span {
+        font-size: 1.5rem;
+    }
+}
+
+/* ==================== SMOOTH SCROLL ==================== */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ==================== SCROLLBAR PERSONALIZADA ==================== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F1F5F9;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2DD4BF;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0F766E;
+}
+.logo-item img {
+    width: 50px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo-item:hover img {
+    transform: scale(1.50);
+}
+
+/* ==================== IMAGENES EN NOTICIAS ==================== */
+
+.img-noticia {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+}
+
+.img-noticia img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* La imagen cubre todo sin deformarse */
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tarjeta-moderna:hover .img-noticia img {
+    transform: scale(1.08);  /* Zoom suave al hacer hover */
+}
+
+/* Opcional: overlay oscuro en hover para mejor efecto */
+.img-noticia::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(45, 212, 191, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.tarjeta-moderna:hover .img-noticia::after {
+    opacity: 1;
+}
+/* ==================== IMAGENES PARA ESPACIO CULTURAL ==================== */
+
+.img-cultura {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.img-cultura img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tarjeta-moderna:hover .img-cultura img {
+    transform: scale(1.1);
+}
+
+/* Overlay con color institucional al hover */
+.img-cultura::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(45, 212, 191, 0.3), rgba(249, 115, 22, 0.3));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.tarjeta-moderna:hover .img-cultura::after {
+    opacity: 1;
+}
+
+/* Estilo especial para la fecha de cultura (mayúsculas como en tu imagen) */
+.fecha-cultura {
+    font-size: 0.7rem;
+    color: #F97316;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    display: inline-block;
+}
